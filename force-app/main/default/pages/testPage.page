@@ -1,0 +1,16 @@
+<apex:page controller="callMethod">
+<apex:pageblock >
+<apex:pageblockSection >
+<apex:form >
+<apex:inputtext value="{!setVar}"/>
+<apex:commandButton value="submit" action="{!submitVal}" rerender="varSection"/>
+<apex:outputPanel id="varSection">
+<apex:outputText >{!setVar}</apex:outputText>
+</apex:outputPanel>
+<apex:outputPanel >
+    <apex:actionpoller action="{!checkVar}" interval="5" reRender="varSection"/>
+</apex:outputPanel>
+</apex:form>
+</apex:pageblockSection>
+</apex:pageblock>
+</apex:page>

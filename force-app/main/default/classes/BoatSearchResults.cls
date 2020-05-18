@@ -1,0 +1,25 @@
+public class BoatSearchResults{
+
+    @AuraEnabled
+
+    public static List<Boat__c> getBoats(String boatTypeId) {
+
+        List<Boat__c> boats = new List<Boat__c>();
+
+        if (String.isEmpty(boatTypeId)) {
+
+            boats = [select Id,Name,Picture__c,Contact__r.name from Boat__c];
+
+        } else{
+
+            boats = [select Id,Name,Picture__c,Contact__r.name from Boat__c where BoatType__c = :boatTypeId ];
+
+        }
+        return boats;
+    }
+    
+    @auraEnabled
+    public static List<BoatType__c> getboattypes() {
+        return [select Id,Name From BoatType__c];
+    }
+}

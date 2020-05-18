@@ -1,0 +1,6 @@
+<aura:component controller="AccountController" implements="flexipage:availableForAllPageTypes"> 
+    <aura:attribute name="account" type="Account" default="{ 'sobjectType': 'Account',
+                        'Name': 'test' }" />
+    <ui:inputPhone aura:id="CellPersonal" label="Cell Personal" class="field" value="{!v.account.phone}" maxlength="10"/>
+	<lightning:button variant="Submit" label="Submit" onclick="{! c.handleClick }" />	
+</aura:component>

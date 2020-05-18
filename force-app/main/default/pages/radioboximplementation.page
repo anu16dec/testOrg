@@ -1,0 +1,28 @@
+<apex:page controller="radioSelection">
+  <apex:form >
+  <apex:pageblock >
+  <apex:pageblockSection columns="4"> 
+  
+  <apex:outputPanel >
+  <apex:selectRadio value="{!selectedValue}" layout="lineDirection" style="align:left;">
+  <apex:selectOption itemLabel="For this Company" itemValue="select A"></apex:selectOption>
+  <apex:selectOption itemLabel="Items owned by Me" itemValue="select B">
+  
+  </apex:selectOption>
+  
+  </apex:selectRadio>
+  
+  </apex:outputPanel>
+  <apex:outputPanel >
+  <apex:selectList size="1">
+  <apex:selectOption itemLabel="bbbbbbbbbbbbbbbbbbbbbb" itemValue="b"></apex:selectOption>
+  <apex:selectOption itemLabel="c" itemValue="c"></apex:selectOption>
+  <apex:selectOption itemLabel="d" itemValue="d"></apex:selectOption>
+  </apex:selectList>  
+  <apex:commandButton value="Search"/>
+  </apex:outputPanel>
+  <apex:outputPanel ></apex:outputPanel>
+  </apex:pageblockSection>
+  </apex:pageblock>
+  </apex:form>
+</apex:page>
